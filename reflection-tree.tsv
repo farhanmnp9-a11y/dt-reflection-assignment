@@ -1,0 +1,14 @@
+id	parentId	type	text	options	target	signal
+START	null	start	Good evening. Let’s reflect on your day.			
+A1	START	question	How did today feel?	Productive|Stressful|Mixed|Draining		
+A2	A1	question	When something went wrong, what did you do?	Took control|Blamed situation|Waited|Adjusted		axis1:internal
+A3	A2	reflection	You had moments of control today. Even small actions matter.			
+B1	A3	bridge	Now think about what you gave today.		A2_OPEN	
+A2_OPEN	null	question	What stood out today?	Helped someone|Did my work|Felt ignored|Expected support		
+A4	A2_OPEN	question	What did you contribute?	Helped others|Shared knowledge|Nothing extra|Avoided work		axis2:contribution
+A5	A4	reflection	Contribution builds long-term value, even when unnoticed.			
+B2	A5	bridge	Now zoom out beyond yourself.		A3_OPEN	
+A3_OPEN	null	question	Who did you think about today?	Myself|Team|Colleague|Customer		
+A6	A3_OPEN	reflection	Expanding your focus changes how you experience work.			
+SUMMARY	A6	summary	Today you reflected on your actions and mindset. Small awareness creates change.			
+END	SUMMARY	end	Good reflection. See you tomorrow.			
